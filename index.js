@@ -23,7 +23,7 @@ async function run() {
         const serviceCollection = database.collection("products");
 
         //GET Api
-        app.get("/services", async (req, res) => {
+        app.get("/products", async (req, res) => {
             const cursor = serviceCollection.find({});
             const services = await cursor.toArray();
             res.send(services);
